@@ -1,8 +1,5 @@
 page 50012 "Seminar Setup"
 {
-    // 2020-01-09  LCY   Re-design Setup Table and Page. Major Changes.
-    // 2020-01-07  LCY   Created this setup page with some fields and page property.
-
     Caption = 'Seminar Setup';
     PageType = Card;
     ApplicationArea = All;

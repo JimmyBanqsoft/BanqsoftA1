@@ -1,10 +1,5 @@
 page 50019 "Scheduled Seminar Card Ongoing"
 {
-    // 2020-01-17  LCY   Added check if participant selfpay or pay by company verification. Added verify if invoice posted then only process to Archieve.
-    // 2020-01-15  LCY   Redo Process to Sales Invoice part. 
-    // 2020-01-14  LCY   Add a trigger to process to Sales invoice to do posting.
-    // 2020-01-13  LCY   Created this page to show based on the seminar status. Add a process to switch status.
-
     Caption = 'Scheduled Seminar Card (Ongoing)';
     PageType = Card;
     SourceTable = "Scheduled Seminar";
@@ -376,8 +371,6 @@ page 50019 "Scheduled Seminar Card Ongoing"
                             end;
                         end;
 
-
-                        // This is after processed to invoice.
                         InvoiceProcess := true;
                         Commit();
 

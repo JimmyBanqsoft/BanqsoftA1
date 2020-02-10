@@ -1,7 +1,5 @@
 page 50005 "Seminar Room Card"
 {
-    // 2020-01-07  LCY   Created this Page with some fields.
-
     Caption = 'Seminar Room Card';
     PageType = Card;
     SourceTable = "Seminar Room";
@@ -66,6 +64,5 @@ page 50005 "Seminar Room Card"
     }
 
     var
-        myInt: Integer;
         IsInHouse: Boolean;
 }

@@ -1,7 +1,5 @@
 page 50004 "Seminar Room List"
 {
-    // 2020-01-07  LCY   Created this Page with some fields.
-
     Caption = 'Seminar Room List';
     PageType = List;
     ApplicationArea = All;

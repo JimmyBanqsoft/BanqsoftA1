@@ -1,7 +1,5 @@
 page 50015 "Seminar Instructor Factbox"
 {
-    // 2020-01-08  LCY   Created this CardPart page to used as Factbox
-
     Caption = 'Seminar Instructor Factbox';
     PageType = CardPart;
     SourceTable = "Seminar Instructor";

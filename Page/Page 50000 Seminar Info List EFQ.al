@@ -1,10 +1,5 @@
 page 50000 "Seminar Info List"
 {
-    // 2020-01-09  LCY   Re-arrange Comment. Major Changes.
-    // 2020-01-07  LCY   Added an action to generate auto-filled ID.
-    // 2020-01-06  LCY   Re-design Table and Fields, then addon Trigger functions. Then created List & Card Pages for some Table.
-
-
     Caption = 'Seminar Info List';
     PageType = List;
     ApplicationArea = All;

@@ -1,7 +1,5 @@
 page 50020 "Scheduled Seminar Card Archive"
 {
-    // 2020-01-13  LCY   Created this page to show based on the seminar status. Add a process to switch status.
-
     Caption = 'Scheduled Seminar Card';
     PageType = Card;
     SourceTable = "Scheduled Seminar";

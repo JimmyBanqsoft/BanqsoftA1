@@ -1,10 +1,5 @@
 page 50018 "Scheduled Seminar Card Confirm"
 {
-    // 2020-01-17  LCY   Create a email page trigger to send email.
-    // 2020-01-13  LCY   Created this page to show based on the seminar status. Add a process to switch status.
-
-    // TODO: When click on process, check if participant more than the minimum, if yes, then continue else cancel.
-
     Caption = 'Scheduled Seminar Card';
     PageType = Card;
     SourceTable = "Scheduled Seminar";

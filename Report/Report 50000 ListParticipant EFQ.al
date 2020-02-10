@@ -69,7 +69,6 @@ report 50000 ListParticipant
     }
 
     var
-        myInt: Integer;
         SchSemID: Code[20];
         ScheduledSeminar: Record "Scheduled Seminar";
 }

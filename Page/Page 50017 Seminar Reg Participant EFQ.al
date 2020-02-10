@@ -1,10 +1,5 @@
 page 50017 "Seminar Reg Ppt List Part"
 {
-    // 2020-01-17  LCY   Added new field.
-    // 2020-01-13  LCY   Created onaftergetrecord to re-assign editable on billable field.
-    // 2020-01-10  LCY   Removed some fields.
-    // 2020-01-09  LCY   Created this list part page
-
     AutoSplitKey = true;
     Caption = 'Registed Participant';
     DelayedInsert = true;

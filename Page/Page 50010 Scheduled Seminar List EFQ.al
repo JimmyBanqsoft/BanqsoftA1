@@ -1,8 +1,5 @@
 page 50010 "Scheduled Seminar List"
 {
-    // 2020-01-10  LCY   Added End time field.
-    // 2020-01-07  LCY   Created this page with some fields and page property.
-
     Caption = 'Scheduled Seminar List';
     PageType = List;
     ApplicationArea = All;
@@ -93,7 +90,6 @@ page 50010 "Scheduled Seminar List"
                 PromotedCategory = New;
                 PromotedIsBig = true;
                 RunPageMode = Create;
-
 
                 trigger OnAction()
                 begin

@@ -1,13 +1,5 @@
 page 50011 "Scheduled Seminar Card"
 {
-    // 2020-01-15  LCY   Added new field to keep CustomerID.
-    // 2020-01-13  LCY   Added the if-else to check if duplicate participant and if user want add more than the max participant. Add a process to switch status.
-    // 2020-01-10  LCY   Added End time field.
-    // 2020-01-09  LCY   Re-arrange Comment.
-    // 2020-01-08  LCY   Add 3 factboxes into this card page. Add a action to add participant (Just a button process), yet to complete.
-    // 2020-01-07  LCY   Created this page with some fields and page property.
-
-
     Caption = 'Scheduled Seminar Card';
     PageType = Card;
     SourceTable = "Scheduled Seminar";

@@ -1,8 +1,5 @@
 page 50016 "Seminar Add Exp List Part"
 {
-    // 2020-01-09  LCY   Minor edited.
-    // 2020-01-08  LCY   Created this list part page
-
     AutoSplitKey = true;
     Caption = 'Seminar Additional Expenses';
     DelayedInsert = true;

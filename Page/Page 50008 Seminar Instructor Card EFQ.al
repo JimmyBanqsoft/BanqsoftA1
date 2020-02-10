@@ -1,6 +1,5 @@
 page 50008 "Seminar Instructor Card"
 {
-    // 2020-01-07  LCY   Created this page with some fields.
     Caption = 'Seminar Instructor Card';
     PageType = Card;
     SourceTable = "Seminar Instructor";
@@ -29,28 +28,11 @@ page 50008 "Seminar Instructor Card"
                     ApplicationArea = All;
 
                 }
-
-
             }
         }
     }
 
     actions
     {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
     }
-
-    var
-        myInt: Integer;
 }

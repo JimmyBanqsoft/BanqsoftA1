@@ -1,6 +1,5 @@
 page 50007 "Seminar Instructor List"
 {
-    // 2020-01-07  LCY   Created this page with some fields.
     Caption = 'Seminar Instructor List';
     PageType = List;
     ApplicationArea = All;
@@ -33,8 +32,6 @@ page 50007 "Seminar Instructor List"
                     ApplicationArea = All;
 
                 }
-
-
             }
         }
     }

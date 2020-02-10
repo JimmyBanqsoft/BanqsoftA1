@@ -1,7 +1,5 @@
 page 50014 "Seminar Room Factbox"
 {
-    // 2020-01-08  LCY   Created this CardPart page to used as Factbox
-
     Caption = 'Seminar Room Factbox';
     PageType = CardPart;
     SourceTable = "Seminar Room";

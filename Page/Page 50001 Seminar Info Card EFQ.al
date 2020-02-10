@@ -1,11 +1,5 @@
 page 50001 "Seminar Info Card"
 {
-    // 2020-01-23  LCY   Rename some fields.
-    // 2020-01-09  LCY   Re-arrange Comment. Major Changes
-    // 2020-01-07  LCY   Added ApplicationArea to all fields.
-    // 2020-01-06  LCY   Re-design Table and Fields, then addon Trigger functions. Then created List & Card Pages for some Table.
-
-
     Caption = 'Seminar Info Card';
     PageType = Card;
     SourceTable = "Seminar Info";
@@ -70,17 +64,5 @@ page 50001 "Seminar Info Card"
 
     actions
     {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
-            }
-        }
     }
 }

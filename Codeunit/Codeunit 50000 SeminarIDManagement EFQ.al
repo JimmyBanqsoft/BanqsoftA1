@@ -1,6 +1,5 @@
 codeunit 50000 "SeminarIDManagement"
 {
-    // 2020-01-07  LCY   Created this codeunit with 3 procedure for auto-filled their ID when creating new entry.
     procedure InitSeminarInfoID(OpenUI: Boolean);
     var
         SeminarInfo: Record "Seminar Info";

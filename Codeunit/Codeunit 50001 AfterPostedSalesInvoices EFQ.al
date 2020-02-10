@@ -1,7 +1,5 @@
 codeunit 50001 AfterPostedSalesInvoices
 {
-    // 2020-01-16  LCY   Created this codeunit to subscribe an event afterpost.
-
     trigger OnRun()
     begin
 

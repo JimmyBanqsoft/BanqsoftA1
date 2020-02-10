@@ -102,6 +102,7 @@ table 50000 "Seminar Info"
 
     trigger OnInsert()
     begin
+        // TODO: Need to see the new code on how they do
         SeminarSetup.FindLast();
         "Seminar ID" := NoSeriesMgt.GetNextNo(SeminarSetup."Seminar Info ID No. Series", 0D, true);
     end;

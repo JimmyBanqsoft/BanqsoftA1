@@ -1,9 +1,5 @@
 table 50005 "Seminar Setup"
 {
-    // 2020-01-09  LCY   Re-design Setup Table and Pages. Major Changes.
-    // 2020-01-07  LCY   Small Changes 
-    // 2020-01-06  LCY   Re-design Table and Fields, then addon Trigger functions. Then created List & Card Pages for some Table.
-
     Caption = 'Seminar Setup';
 
     fields

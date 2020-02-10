@@ -168,7 +168,6 @@ page 50011 "Scheduled Seminar Card"
                                         else
                                             Message('No more slot to register more participant.')
                                     else begin
-                                        // TODO: Convert to one procedure.....
                                         "Total Registered Participants" := CountParticipant;
                                         TRegPpt.Init();
                                         TRegPpt."Schedule Seminar ID" := ID;

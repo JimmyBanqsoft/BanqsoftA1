@@ -51,6 +51,5 @@ table 50004 "Seminar Instructor"
     begin
         SeminarSetup.FindLast();
         "ID" := NoSeriesMgt.GetNextNo(SeminarSetup."Sem Instructor ID No. Series", 0D, true);
-
     end;
 }

@@ -11,20 +11,20 @@ table 50004 "Seminar Instructor"
         {
             Caption = 'Intructor ID';
             DataClassification = CustomerContent;
-
+            Editable = false;
         }
 
         field(10; "Instructor Name"; Text[50])
         {
             Caption = 'Intructor Name';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
         }
 
         field(20; "Area of Expertise"; Text[100])
         {
             Caption = 'Area of Expertise';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
         }
     }
@@ -49,7 +49,11 @@ table 50004 "Seminar Instructor"
 
     trigger OnInsert()
     begin
-        SeminarSetup.FindLast();
-        "ID" := NoSeriesMgt.GetNextNo(SeminarSetup."Sem Instructor ID No. Series", 0D, true);
+        if ID = '' then begin
+            SeminarSetup.Reset();
+            SeminarSetup.Get();
+            SeminarSetup.TestField("Sem Instructor ID No. Series");
+            NoSeriesMgt.InitSeries(SeminarSetup."Sem Instructor ID No. Series", '', 0D, ID, SeminarSetup."Sem Instructor ID No. Series");
+        end;
     end;
 }

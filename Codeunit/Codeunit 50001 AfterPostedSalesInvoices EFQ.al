@@ -11,8 +11,9 @@ codeunit 50001 AfterPostedSalesInvoices
         PostedSalesInvoices: Record "Sales Invoice Header";
     begin
         PostedSalesInvoices.SetRange(PostedSalesInvoices."Pre-Assigned No.", SalesHeader."No.");
-        if PostedSalesInvoices.FindFirst() then
+        if PostedSalesInvoices.FindFirst() then begin
             PostedSalesInvoices."Scheduled Seminar ID" := SalesHeader."Scheduled Seminar ID";
-        PostedSalesInvoices.Modify(true);
+            PostedSalesInvoices.Modify(true);
+        end;
     end;
 }

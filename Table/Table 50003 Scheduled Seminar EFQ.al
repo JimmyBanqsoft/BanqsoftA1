@@ -15,12 +15,15 @@ table 50003 "Scheduled Seminar"
         }
         field(2; Status; Option)
         {
+            Caption = 'Status';
+            DataClassification = CustomerContent;
             OptionMembers = "Registration","Confirm","Ongoing","Archieve","Cancelled";
             OptionCaption = 'Registration,Confirm,Ongoing,Archieve,Cancelled';
         }
         field(10; "Seminar ID"; Code[20])
         {
             Caption = 'Scheduled Seminar ID';
+            DataClassification = CustomerContent;
             TableRelation = "Seminar Info"."Seminar ID";
 
             trigger OnValidate();
@@ -37,12 +40,14 @@ table 50003 "Scheduled Seminar"
         field(11; "Seminar Name"; Text[100])
         {
             Caption = 'Seminar Name';
+            DataClassification = CustomerContent;
             Editable = false;
         }
 
         field(20; "Room ID"; Code[20])
         {
             Caption = 'Room ID';
+            DataClassification = CustomerContent;
             TableRelation = "Seminar Room"."Room ID";
 
             trigger OnValidate();
@@ -60,6 +65,7 @@ table 50003 "Scheduled Seminar"
         field(30; "Instructor ID"; Code[20])
         {
             Caption = 'Instructor ID';
+            DataClassification = CustomerContent;
             TableRelation = "Seminar Instructor".ID;
 
             trigger OnValidate();
@@ -156,8 +162,12 @@ table 50003 "Scheduled Seminar"
 
     trigger OnInsert()
     begin
-        SeminarSetup.FindLast();
-        ID := NoSeriesMgt.GetNextNo(SeminarSetup."Scehduled Sem ID No. Series", 0D, true);
+        if ID = '' then begin
+            SeminarSetup.Reset();
+            SeminarSetup.Get();
+            SeminarSetup.TestField("Scehduled Sem ID No. Series");
+            NoSeriesMgt.InitSeries(SeminarSetup."Scehduled Sem ID No. Series", '', 0D, ID, SeminarSetup."Scehduled Sem ID No. Series");
+        end;
     end;
 
     procedure CheckMaxOrOverMaxParticipant(SeminarID: Code[20]; RoomID: Code[20]);

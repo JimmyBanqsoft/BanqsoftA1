@@ -17,6 +17,7 @@ table 50002 "Seminar Room"
         field(10; "Room Type"; Option)
         {
             Caption = 'Room Type';
+            DataClassification = CustomerContent;
             OptionMembers = "In-House","Off-Site";
 
             trigger OnValidate()
@@ -28,12 +29,13 @@ table 50002 "Seminar Room"
         field(20; "Room Name"; Text[50])
         {
             Caption = 'Room Name';
-
+            DataClassification = CustomerContent;
         }
 
         field(30; "Room Size"; Option)
         {
             Caption = 'Room Size';
+            DataClassification = CustomerContent;
             OptionMembers = "Small","Medium","Large";
             OptionCaption = 'Small, Medium, Large';
 
@@ -59,6 +61,7 @@ table 50002 "Seminar Room"
         field(40; "Cost of Room"; Decimal)
         {
             Caption = 'Cost of Room';
+            DataClassification = CustomerContent;
         }
 
         field(90; "Over Maximum Participant"; Integer)
@@ -90,16 +93,28 @@ table 50002 "Seminar Room"
 
     trigger OnInsert()
     begin
-        SeminarSetup.FindLast();
-        "Room ID" := NoSeriesMgt.GetNextNo(SeminarSetup."Seminar Room ID No. Series", 0D, true);
-
+        if "Room ID" = '' then begin
+            SeminarSetup.Reset();
+            SeminarSetup.Get();
+            SeminarSetup.TestField("Seminar Room ID No. Series");
+            NoSeriesMgt.InitSeries(SeminarSetup."Seminar Room ID No. Series", '', 0D, "Room ID", SeminarSetup."Seminar Room ID No. Series");
+        end;
     end;
 
     procedure AssignRoomCost(RoomTypeSelected: Option; RoomCost: Decimal);
     begin
-        if RoomTypeSelected = "Room Type"::"In-House" then
-            "Cost of Room" := 0.00
-        else
-            "Cost of Room" := RoomCost
+        case RoomTypeSelected of
+            "Room Type"::"In-House":
+                begin
+                    "Cost of Room" := 0.00;
+                end;
+            "Room Type"::"Off-Site":
+                begin
+                    "Cost of Room" := RoomCost;
+                end;
+            else begin
+                    Error('Not such selection existed!');
+                end;
+        end;
     end;
 }

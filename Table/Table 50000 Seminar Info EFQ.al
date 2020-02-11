@@ -12,11 +12,6 @@ table 50000 "Seminar Info"
             Caption = 'Seminar ID';
             DataClassification = CustomerContent;
             Editable = false;
-
-            trigger OnValidate();
-            begin
-                Validate("Seminar Name");
-            end;
         }
 
         field(10; "Seminar Name"; Text[100])
@@ -102,8 +97,11 @@ table 50000 "Seminar Info"
 
     trigger OnInsert()
     begin
-        // TODO: Need to see the new code on how they do
-        SeminarSetup.FindLast();
-        "Seminar ID" := NoSeriesMgt.GetNextNo(SeminarSetup."Seminar Info ID No. Series", 0D, true);
+        if "Seminar ID" = '' then begin
+            SeminarSetup.Reset();
+            SeminarSetup.Get();
+            SeminarSetup.TestField("Seminar Info ID No. Series");
+            NoSeriesMgt.InitSeries(SeminarSetup."Seminar Info ID No. Series", '', 0D, "Seminar ID", SeminarSetup."Seminar Info ID No. Series");
+        end;
     end;
 }

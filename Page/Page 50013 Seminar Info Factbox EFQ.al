@@ -51,8 +51,4 @@ page 50013 "Seminar Info Factbox"
             }
         }
     }
-
-    actions
-    {
-    }
 }

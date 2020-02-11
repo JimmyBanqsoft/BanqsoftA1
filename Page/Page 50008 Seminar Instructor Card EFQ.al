@@ -3,6 +3,8 @@ page 50008 "Seminar Instructor Card"
     Caption = 'Seminar Instructor Card';
     PageType = Card;
     SourceTable = "Seminar Instructor";
+    PromotedActionCategories = 'New,Process,Report';
+    RefreshOnActivate = true;
 
     layout
     {
@@ -30,9 +32,5 @@ page 50008 "Seminar Instructor Card"
                 }
             }
         }
-    }
-
-    actions
-    {
     }
 }

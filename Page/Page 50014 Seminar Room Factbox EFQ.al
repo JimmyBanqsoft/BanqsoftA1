@@ -46,8 +46,4 @@ page 50014 "Seminar Room Factbox"
             }
         }
     }
-
-    actions
-    {
-    }
 }

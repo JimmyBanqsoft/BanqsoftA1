@@ -7,6 +7,7 @@ page 50007 "Seminar Instructor List"
     SourceTable = "Seminar Instructor";
     CardPageId = 50008;
     Editable = false;
+    PromotedActionCategories = 'New,Process,Report';
 
     layout
     {

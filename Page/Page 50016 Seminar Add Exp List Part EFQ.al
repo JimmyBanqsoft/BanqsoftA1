@@ -38,8 +38,4 @@ page 50016 "Seminar Add Exp List Part"
             }
         }
     }
-
-    actions
-    {
-    }
 }

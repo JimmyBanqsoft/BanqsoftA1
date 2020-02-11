@@ -3,6 +3,8 @@ page 50011 "Scheduled Seminar Card"
     Caption = 'Scheduled Seminar Card';
     PageType = Card;
     SourceTable = "Scheduled Seminar";
+    PromotedActionCategories = 'New,Process,Report';
+    RefreshOnActivate = true;
 
     layout
     {

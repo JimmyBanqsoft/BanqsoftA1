@@ -3,6 +3,8 @@ page 50005 "Seminar Room Card"
     Caption = 'Seminar Room Card';
     PageType = Card;
     SourceTable = "Seminar Room";
+    PromotedActionCategories = 'New,Process,Report';
+    RefreshOnActivate = true;
 
     layout
     {
@@ -58,11 +60,6 @@ page 50005 "Seminar Room Card"
             }
         }
     }
-
-    actions
-    {
-    }
-
     var
         IsInHouse: Boolean;
 }

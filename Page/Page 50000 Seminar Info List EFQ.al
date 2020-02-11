@@ -7,6 +7,8 @@ page 50000 "Seminar Info List"
     SourceTable = "Seminar Info";
     CardPageId = 50001;
     Editable = false;
+    PromotedActionCategories = 'New,Process,Report';
+
 
     layout
     {
@@ -56,10 +58,6 @@ page 50000 "Seminar Info List"
                     ApplicationArea = All;
                 }
             }
-        }
-        area(Factboxes)
-        {
-
         }
     }
 

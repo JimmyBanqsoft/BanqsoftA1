@@ -4,6 +4,8 @@ page 50019 "Scheduled Seminar Card Ongoing"
     PageType = Card;
     SourceTable = "Scheduled Seminar";
     DeleteAllowed = false;
+    PromotedActionCategories = 'New,Process,Report';
+    RefreshOnActivate = true;
 
     layout
     {

@@ -28,8 +28,4 @@ page 50015 "Seminar Instructor Factbox"
             }
         }
     }
-
-    actions
-    {
-    }
 }

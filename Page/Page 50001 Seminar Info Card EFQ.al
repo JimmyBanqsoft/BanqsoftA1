@@ -3,6 +3,8 @@ page 50001 "Seminar Info Card"
     Caption = 'Seminar Info Card';
     PageType = Card;
     SourceTable = "Seminar Info";
+    PromotedActionCategories = 'New,Process,Report';
+    RefreshOnActivate = true;
 
     layout
     {
@@ -56,13 +58,5 @@ page 50001 "Seminar Info Card"
                 }
             }
         }
-        area(Factboxes)
-        {
-
-        }
-    }
-
-    actions
-    {
     }
 }

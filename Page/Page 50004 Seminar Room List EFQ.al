@@ -7,6 +7,7 @@ page 50004 "Seminar Room List"
     SourceTable = "Seminar Room";
     CardPageId = 50005;
     Editable = false;
+    PromotedActionCategories = 'New,Process,Report';
 
     layout
     {

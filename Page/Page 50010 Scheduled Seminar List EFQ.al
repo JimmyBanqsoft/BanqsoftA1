@@ -6,6 +6,7 @@ page 50010 "Scheduled Seminar List"
     UsageCategory = Lists;
     SourceTable = "Scheduled Seminar";
     CardPageId = 50011;
+    PromotedActionCategories = 'New,Process,Report';
 
     layout
     {

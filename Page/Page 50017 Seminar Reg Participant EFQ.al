@@ -54,10 +54,6 @@ page 50017 "Seminar Reg Ppt List Part"
         }
     }
 
-    actions
-    {
-    }
-
     var
         CheckIfBillable: Boolean;
         IsStatusRegistration: Boolean;

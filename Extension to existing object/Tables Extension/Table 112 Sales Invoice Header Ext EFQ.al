@@ -1,4 +1,4 @@
-tableextension 50001 SalesInvoiceHeaderExt extends "Sales Invoice Header" //MyTargetTableId
+tableextension 50001 SalesInvoiceHeaderExt extends "Sales Invoice Header"
 {
     fields
     {

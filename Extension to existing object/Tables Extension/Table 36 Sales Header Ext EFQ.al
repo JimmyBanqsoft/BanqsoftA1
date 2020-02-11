@@ -1,4 +1,4 @@
-tableextension 50000 "SalesHeaderExt" extends "Sales Header" //MyTargetTableId
+tableextension 50000 "SalesHeaderExt" extends "Sales Header"
 {
     fields
     {

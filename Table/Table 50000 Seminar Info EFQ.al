@@ -47,16 +47,14 @@ table 50000 "Seminar Info"
 
         field(50; "Minimum Participants"; Integer)
         {
-            MinValue = 1;
-            InitValue = 1;
             Caption = 'Minimum Participants';
             DataClassification = CustomerContent;
+            InitValue = 1;
+            MinValue = 1;
 
             trigger OnValidate();
             begin
-                if "Maximum Participants" <> 0 then begin
-                    Validate("Maximum Participants");
-                end;
+                "Maximum Participants" := "Minimum Participants" + 1;
             end;
         }
 
@@ -69,10 +67,8 @@ table 50000 "Seminar Info"
 
             trigger OnValidate();
             begin
-                if "Minimum Participants" <> 0 then begin
-                    if "Minimum Participants" > "Maximum Participants" then
-                        Error('Input of Maximum Participant cannot lower than Minimum Participant.')
-                end;
+                if "Minimum Participants" > "Maximum Participants" then
+                    Error('Input of Maximum Participant cannot lower than Minimum Participant.')
             end;
         }
     }

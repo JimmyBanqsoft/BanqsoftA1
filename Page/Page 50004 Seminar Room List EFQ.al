@@ -1,13 +1,13 @@
 page 50004 "Seminar Room List"
 {
-    Caption = 'Seminar Room List';
-    PageType = List;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = "Seminar Room";
+    Caption = 'Seminar Room List';
     CardPageId = 50005;
     Editable = false;
+    PageType = List;
     PromotedActionCategories = 'New,Process,Report';
+    SourceTable = "Seminar Room";
+    UsageCategory = Administration;
 
     layout
     {
@@ -17,39 +17,39 @@ page 50004 "Seminar Room List"
             {
                 field("Room ID"; "Room ID")
                 {
-                    Caption = 'Room ID';
                     ApplicationArea = All;
+                    Caption = 'Room ID';
                     Editable = false;
                 }
+
                 field("Room Type"; "Room Type")
                 {
-                    Caption = 'Room Type';
                     ApplicationArea = All;
+                    Caption = 'Room Type';
                 }
+
                 field("Room Name"; "Room Name")
                 {
-                    Caption = 'Room Name';
                     ApplicationArea = All;
-
+                    Caption = 'Room Name';
                 }
+
                 field("Room Size"; "Room Size")
                 {
-                    Caption = 'Room Size';
                     ApplicationArea = All;
-
+                    Caption = 'Room Size';
                 }
+
                 field("Cost of Room"; "Cost of Room")
                 {
-                    Caption = 'Cost of Room';
                     ApplicationArea = All;
-
-
+                    Caption = 'Cost of Room';
                 }
+
                 field("Over Maximum Participant"; "Over Maximum Participant")
                 {
-                    Caption = 'Over Maximum Participant';
                     ApplicationArea = All;
-
+                    Caption = 'Over Maximum Participant';
                 }
             }
         }

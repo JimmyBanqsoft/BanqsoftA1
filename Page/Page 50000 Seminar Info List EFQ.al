@@ -1,14 +1,13 @@
 page 50000 "Seminar Info List"
 {
-    Caption = 'Seminar Info List';
-    PageType = List;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = "Seminar Info";
+    Caption = 'Seminar Info List';
     CardPageId = 50001;
     Editable = false;
+    PageType = List;
     PromotedActionCategories = 'New,Process,Report';
-
+    SourceTable = "Seminar Info";
+    UsageCategory = Administration;
 
     layout
     {
@@ -18,44 +17,44 @@ page 50000 "Seminar Info List"
             {
                 field("Seminar ID"; "Seminar ID")
                 {
-                    Caption = 'Seminar ID';
                     ApplicationArea = All;
+                    Caption = 'Seminar ID';
                 }
 
                 field("Seminar Name"; "Seminar Name")
                 {
-                    Caption = 'Seminar Name';
                     ApplicationArea = All;
+                    Caption = 'Seminar Name';
                 }
 
                 field(Description; Description)
                 {
-                    Caption = 'Description';
                     ApplicationArea = All;
+                    Caption = 'Description';
                 }
 
                 field("Seminar Duration"; "Seminar Duration")
                 {
-                    Caption = 'Seminar Duration';
                     ApplicationArea = All;
+                    Caption = 'Seminar Duration';
                 }
 
-                field("Seminar Cost"; "Seminar Price")
+                field("Seminar Price"; "Seminar Price")
                 {
-                    Caption = 'Seminar Cost';
                     ApplicationArea = All;
+                    Caption = 'Seminar Price';
                 }
 
                 field("Minimum Participants"; "Minimum Participants")
                 {
-                    Caption = 'Minimum Participants';
                     ApplicationArea = All;
+                    Caption = 'Minimum Participants';
                 }
 
                 field("Maximum Participant"; "Maximum Participants")
                 {
-                    Caption = 'Maximum Participant';
                     ApplicationArea = All;
+                    Caption = 'Maximum Participant';
                 }
             }
         }

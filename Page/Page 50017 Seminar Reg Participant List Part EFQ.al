@@ -12,43 +12,46 @@ page 50017 "Seminar Reg Ppt List Part"
         {
             repeater(General)
             {
+                // Add tooltip for each field
                 field(ID; ID)
                 {
-                    Caption = 'ID';
                     ApplicationArea = All;
+                    Caption = 'ID';
                     Editable = IsStatusRegistration;
                 }
 
                 field(Name; Name)
                 {
-                    Caption = 'Name';
                     ApplicationArea = All;
+                    Caption = 'Name';
                     Editable = IsStatusRegistration;
                 }
 
                 field("E-Mail"; "E-Mail")
                 {
-                    Caption = 'E-Mail';
                     ApplicationArea = All;
+                    Caption = 'E-Mail';
                     Editable = IsStatusRegistration;
                 }
 
                 field("Phone No."; "Phone No.")
                 {
-                    Caption = 'Phone No';
                     ApplicationArea = All;
+                    Caption = 'Phone No';
                     Editable = IsStatusRegistration;
                 }
+
                 field(Billable; Billable)
                 {
-                    Caption = 'Additional Charges';
                     ApplicationArea = All;
+                    Caption = 'Additional Charges';
                     Editable = CheckIfBillable;
                 }
+
                 field("Bill-To-Company"; "Bill-To-Company")
                 {
-                    Caption = 'Bill-To-Company';
                     ApplicationArea = All;
+                    Caption = 'Bill-To-Company';
                 }
             }
         }

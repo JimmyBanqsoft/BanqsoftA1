@@ -2,9 +2,9 @@ page 50008 "Seminar Instructor Card"
 {
     Caption = 'Seminar Instructor Card';
     PageType = Card;
-    SourceTable = "Seminar Instructor";
     PromotedActionCategories = 'New,Process,Report';
     RefreshOnActivate = true;
+    SourceTable = "Seminar Instructor";
 
     layout
     {
@@ -14,21 +14,20 @@ page 50008 "Seminar Instructor Card"
             {
                 field(ID; ID)
                 {
-                    Caption = '';
                     ApplicationArea = All;
-
+                    Caption = 'ID';
                 }
+
                 field("Instructor Name"; "Instructor Name")
                 {
-                    Caption = '';
                     ApplicationArea = All;
-
+                    Caption = 'Instructor Name';
                 }
+
                 field("Area of Expertise"; "Area of Expertise")
                 {
-                    Caption = '';
                     ApplicationArea = All;
-
+                    Caption = 'Area of Expertise';
                 }
             }
         }

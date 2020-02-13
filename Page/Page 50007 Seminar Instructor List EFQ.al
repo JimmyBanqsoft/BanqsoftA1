@@ -1,13 +1,13 @@
 page 50007 "Seminar Instructor List"
 {
-    Caption = 'Seminar Instructor List';
-    PageType = List;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = "Seminar Instructor";
+    Caption = 'Seminar Instructor List';
     CardPageId = 50008;
     Editable = false;
+    PageType = List;
     PromotedActionCategories = 'New,Process,Report';
+    SourceTable = "Seminar Instructor";
+    UsageCategory = Administration;
 
     layout
     {
@@ -17,21 +17,20 @@ page 50007 "Seminar Instructor List"
             {
                 field(ID; ID)
                 {
-                    Caption = '';
                     ApplicationArea = All;
-
+                    Caption = 'ID';
                 }
+
                 field("Instructor Name"; "Instructor Name")
                 {
-                    Caption = '';
                     ApplicationArea = All;
-
+                    Caption = 'Instructor Name';
                 }
+
                 field("Area of Expertise"; "Area of Expertise")
                 {
-                    Caption = '';
                     ApplicationArea = All;
-
+                    Caption = 'Area of Expertise';
                 }
             }
         }

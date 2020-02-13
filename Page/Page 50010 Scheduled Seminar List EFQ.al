@@ -1,12 +1,12 @@
 page 50010 "Scheduled Seminar List"
 {
-    Caption = 'Scheduled Seminar List';
-    PageType = List;
     ApplicationArea = All;
-    UsageCategory = Lists;
-    SourceTable = "Scheduled Seminar";
+    Caption = 'Scheduled Seminar List';
     CardPageId = 50011;
+    PageType = List;
     PromotedActionCategories = 'New,Process,Report';
+    SourceTable = "Scheduled Seminar";
+    UsageCategory = Lists;
 
     layout
     {
@@ -16,63 +16,73 @@ page 50010 "Scheduled Seminar List"
             {
                 field(ID; ID)
                 {
-                    Caption = 'ID';
                     ApplicationArea = All;
+                    Caption = 'ID';
 
                     trigger OnDrillDown();
                     begin
                         ShowScheduledSemCard(false);
                     end;
                 }
+
                 field("Seminar ID"; "Seminar ID")
                 {
-                    Caption = 'Seminar ID';
                     ApplicationArea = All;
+                    Caption = 'Seminar ID';
                 }
+
                 field("Seminar Name"; "Seminar Name")
                 {
-                    Caption = 'Seminar Name';
                     ApplicationArea = All;
+                    Caption = 'Seminar Name';
                 }
+
                 field(Status; Status)
                 {
-                    Caption = 'Status';
                     ApplicationArea = All;
+                    Caption = 'Status';
                 }
+
                 field("Room ID"; "Room ID")
                 {
-                    Caption = 'Room ID';
                     ApplicationArea = All;
+                    Caption = 'Room ID';
                 }
+
                 field("Instructor ID"; "Instructor ID")
                 {
-                    Caption = 'Instructor ID';
                     ApplicationArea = All;
+                    Caption = 'Instructor ID';
                 }
+
                 field("Seminar Date"; "Seminar Date")
                 {
-                    Caption = 'Seminar Date';
                     ApplicationArea = All;
+                    Caption = 'Seminar Date';
                 }
+
                 field("Seminar Start Time"; "Seminar Start Time")
                 {
-                    Caption = 'Start Time';
                     ApplicationArea = All;
+                    Caption = 'Start Time';
                 }
+
                 field("Seminar End Time"; "Seminar End Time")
                 {
-                    Caption = 'End Time';
                     ApplicationArea = All;
+                    Caption = 'End Time';
                 }
+
                 field("Maximum Participant"; "Maximum Participant")
                 {
-                    Caption = 'Maximum Participant';
                     ApplicationArea = All;
+                    Caption = 'Maximum Participant';
                 }
+
                 field("Total Registered Participants"; "Total Registered Participants")
                 {
-                    Caption = 'Total Reg. Participants';
                     ApplicationArea = All;
+                    Caption = 'Total Reg. Participants';
                 }
             }
         }

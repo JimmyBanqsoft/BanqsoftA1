@@ -10,44 +10,44 @@ page 50013 "Seminar Info Factbox"
         {
             field("Seminar ID"; "Seminar ID")
             {
-                Caption = 'Seminar ID';
                 ApplicationArea = All;
-
+                Caption = 'Seminar ID';
             }
+
             field("Seminar Name"; "Seminar Name")
             {
-                Caption = 'Seminar Name';
                 ApplicationArea = All;
-
+                Caption = 'Seminar Name';
             }
+
             field(Description; Description)
             {
-                Caption = 'Description';
                 ApplicationArea = All;
-
+                Caption = 'Description';
             }
+
             field("Seminar Duration"; "Seminar Duration")
             {
-                Caption = 'Seminar Duration';
                 ApplicationArea = All;
-
+                Caption = 'Seminar Duration';
             }
+
             field("Seminar Price"; "Seminar Price")
             {
-                Caption = 'Seminar Price';
                 ApplicationArea = All;
-
+                Caption = 'Seminar Price';
             }
+
             field("Minimum Participants"; "Minimum Participants")
             {
-                Caption = 'Minimum Participants';
                 ApplicationArea = All;
-
+                Caption = 'Minimum Participants';
             }
+
             field("Maximum Participant"; "Maximum Participants")
             {
-                Caption = 'Maximum Participant';
                 ApplicationArea = All;
+                Caption = 'Maximum Participant';
             }
         }
     }

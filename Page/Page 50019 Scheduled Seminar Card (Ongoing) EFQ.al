@@ -1,11 +1,11 @@
 page 50019 "Scheduled Seminar Card Ongoing"
 {
     Caption = 'Scheduled Seminar Card (Ongoing)';
-    PageType = Card;
-    SourceTable = "Scheduled Seminar";
     DeleteAllowed = false;
+    PageType = Card;
     PromotedActionCategories = 'New,Process,Report';
     RefreshOnActivate = true;
+    SourceTable = "Scheduled Seminar";
 
     layout
     {
@@ -15,62 +15,71 @@ page 50019 "Scheduled Seminar Card Ongoing"
             {
                 field(ID; ID)
                 {
-                    Caption = 'ID';
                     ApplicationArea = All;
+                    Caption = 'ID';
                     Editable = false;
                 }
+
                 field("Seminar ID"; "Seminar ID")
                 {
-                    Caption = 'Seminar ID';
                     ApplicationArea = All;
+                    Caption = 'Seminar ID';
                     Editable = false;
                 }
+
                 field("Room ID"; "Room ID")
                 {
-                    Caption = 'Room ID';
                     ApplicationArea = All;
+                    Caption = 'Room ID';
                     Editable = false;
                 }
+
                 field("Instructor ID"; "Instructor ID")
                 {
-                    Caption = 'Instructor ID';
                     ApplicationArea = All;
+                    Caption = 'Instructor ID';
                     Editable = false;
                 }
+
                 field("Seminar Date"; "Seminar Date")
                 {
-                    Caption = 'Seminar Date';
                     ApplicationArea = All;
+                    Caption = 'Seminar Date';
                     Editable = false;
                 }
+
                 field("Seminar Start Time"; "Seminar Start Time")
                 {
-                    Caption = 'Start Time';
                     ApplicationArea = All;
+                    Caption = 'Start Time';
                     Editable = false;
                 }
+
                 field("Seminar End Time"; "Seminar End Time")
                 {
-                    Caption = 'End Time';
                     ApplicationArea = All;
+                    Caption = 'End Time';
                     Editable = false;
                 }
+
                 field("Minimum Participant"; "Minimum Participant")
                 {
-                    Caption = 'Minimum Participant';
                     ApplicationArea = All;
+                    Caption = 'Minimum Participant';
                     Editable = false;
                 }
+
                 field("Maximum Participant"; "Maximum Participant")
                 {
-                    Caption = 'Maximum Participant';
                     ApplicationArea = All;
+                    Caption = 'Maximum Participant';
                     Editable = false;
                 }
+
                 field("Total Registered Participants"; "Total Registered Participants")
                 {
-                    Caption = 'Total Reg. Participants';
                     ApplicationArea = All;
+                    Caption = 'Total Reg. Participants';
                     Editable = false;
                 }
             }
@@ -78,14 +87,14 @@ page 50019 "Scheduled Seminar Card Ongoing"
             part("Seminar Add Exp List Part"; "Seminar Add Exp List Part")
             {
                 Caption = 'Seminar Additional Expenses';
-                SubPageLink = "Schedule Seminar ID" = field (ID);
                 Editable = false;
+                SubPageLink = "Schedule Seminar ID" = field(ID);
             }
 
             part("Seminar Reg Ppt List Part"; "Seminar Reg Ppt List Part")
             {
                 Caption = 'Seminar Registered Participant';
-                SubPageLink = "Schedule Seminar ID" = field (ID);
+                SubPageLink = "Schedule Seminar ID" = field(ID);
             }
         }
 
@@ -94,18 +103,19 @@ page 50019 "Scheduled Seminar Card Ongoing"
             part("Seminar Info Details"; "Seminar Info Factbox")
             {
                 Caption = 'Seminar Info Details';
-                SubPageLink = "Seminar ID" = field ("Seminar ID");
+                SubPageLink = "Seminar ID" = field("Seminar ID");
             }
 
             part("Seminar Room Details"; "Seminar Room Factbox")
             {
                 Caption = 'Seminar Room Details';
-                SubPageLink = "Room ID" = field ("Room ID");
+                SubPageLink = "Room ID" = field("Room ID");
             }
+
             part("Seminar Instructor Details"; "Seminar Instructor Factbox")
             {
                 Caption = 'Seminar Instructor Details';
-                SubPageLink = "ID" = field ("Instructor ID");
+                SubPageLink = "ID" = field("Instructor ID");
             }
         }
     }
@@ -234,7 +244,7 @@ page 50019 "Scheduled Seminar Card Ongoing"
 
                                 Clear(TSalesHeader);
                                 TSalesHeader.Reset();
-                                TSalesHeader.Init();
+                                // TSalesHeader.Init();
                                 TSalesHeader."Document Type" := TSalesHeader."Document Type"::Invoice;
                                 TSalesHeader.Validate("No.");
                                 TSalesHeader."Sell-to Customer Name" := TCustomer.Name;
@@ -255,7 +265,7 @@ page 50019 "Scheduled Seminar Card Ongoing"
                                         SalesLineNo := SalesLineNo + 1;
                                         Clear(TSalesLine);
                                         TSalesLine.Reset();
-                                        TSalesLine.Init();
+                                        // TSalesLine.Init();
                                         TSalesLine."Document Type" := TSalesHeader."Document Type";
                                         TSalesLine.Validate("Document Type");
 
@@ -318,7 +328,7 @@ page 50019 "Scheduled Seminar Card Ongoing"
 
                                 Clear(TSalesHeader);
                                 TSalesHeader.Reset();
-                                TSalesHeader.Init();
+                                // TSalesHeader.Init();
                                 TSalesHeader."Document Type" := TSalesHeader."Document Type"::Invoice;
                                 TSalesHeader.Validate("No.");
                                 TSalesHeader."Sell-to Customer Name" := TCustomer.Name;
@@ -332,7 +342,7 @@ page 50019 "Scheduled Seminar Card Ongoing"
                                 SalesLineNo := SalesLineNo + 1;
                                 Clear(TSalesLine);
                                 TSalesLine.Reset();
-                                TSalesLine.Init();
+                                // TSalesLine.Init();
                                 TSalesLine."Document Type" := TSalesHeader."Document Type";
                                 TSalesLine.Validate("Document Type");
                                 TSalesLine."Document No." := TSalesHeader."No.";
@@ -355,7 +365,7 @@ page 50019 "Scheduled Seminar Card Ongoing"
                                             SalesLineNo := SalesLineNo + 1;
                                             Clear(TSalesLine);
                                             TSalesLine.Reset();
-                                            TSalesLine.Init();
+                                            // TSalesLine.Init();
                                             TSalesLine."Document Type" := TSalesHeader."Document Type";
                                             TSalesLine."Document No." := TSalesHeader."No.";
                                             TSalesLine."Line No." := SalesLineNo;

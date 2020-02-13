@@ -10,21 +10,20 @@ page 50015 "Seminar Instructor Factbox"
         {
             field(ID; ID)
             {
-                Caption = '';
                 ApplicationArea = All;
-
+                Caption = 'ID';
             }
+
             field("Instructor Name"; "Instructor Name")
             {
-                Caption = '';
                 ApplicationArea = All;
-
+                Caption = 'Instructor Name';
             }
+
             field("Area of Expertise"; "Area of Expertise")
             {
-                Caption = '';
                 ApplicationArea = All;
-
+                Caption = 'Area of Expertise';
             }
         }
     }

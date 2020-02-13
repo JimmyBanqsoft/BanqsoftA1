@@ -1,11 +1,11 @@
 page 50020 "Scheduled Seminar Card Archive"
 {
     Caption = 'Scheduled Seminar Card';
-    PageType = Card;
-    SourceTable = "Scheduled Seminar";
     Editable = false;
+    PageType = Card;
     PromotedActionCategories = 'New,Process,Report';
     RefreshOnActivate = true;
+    SourceTable = "Scheduled Seminar";
 
     layout
     {
@@ -15,66 +15,75 @@ page 50020 "Scheduled Seminar Card Archive"
             {
                 field(ID; ID)
                 {
-                    Caption = 'ID';
                     ApplicationArea = All;
+                    Caption = 'ID';
                 }
+
                 field("Seminar ID"; "Seminar ID")
                 {
-                    Caption = 'Seminar ID';
                     ApplicationArea = All;
+                    Caption = 'Seminar ID';
                 }
+
                 field("Room ID"; "Room ID")
                 {
-                    Caption = 'Room ID';
                     ApplicationArea = All;
+                    Caption = 'Room ID';
                 }
+
                 field("Instructor ID"; "Instructor ID")
                 {
-                    Caption = 'Instructor ID';
                     ApplicationArea = All;
+                    Caption = 'Instructor ID';
                 }
+
                 field("Seminar Date"; "Seminar Date")
                 {
-                    Caption = 'Seminar Date';
                     ApplicationArea = All;
+                    Caption = 'Seminar Date';
                 }
+
                 field("Seminar Start Time"; "Seminar Start Time")
                 {
-                    Caption = 'Start Time';
                     ApplicationArea = All;
+                    Caption = 'Start Time';
                 }
+
                 field("Seminar End Time"; "Seminar End Time")
                 {
-                    Caption = 'End Time';
                     ApplicationArea = All;
+                    Caption = 'End Time';
                 }
+
                 field("Minimum Participant"; "Minimum Participant")
                 {
-                    Caption = 'Minimum Participant';
                     ApplicationArea = All;
+                    Caption = 'Minimum Participant';
                 }
+
                 field("Maximum Participant"; "Maximum Participant")
                 {
-                    Caption = 'Maximum Participant';
                     ApplicationArea = All;
+                    Caption = 'Maximum Participant';
                 }
+
                 field("Total Registered Participants"; "Total Registered Participants")
                 {
-                    Caption = 'Total Reg. Participants';
                     ApplicationArea = All;
+                    Caption = 'Total Reg. Participants';
                 }
             }
 
             part("Seminar Add Exp List Part"; "Seminar Add Exp List Part")
             {
                 Caption = 'Seminar Additional Expenses';
-                SubPageLink = "Schedule Seminar ID" = field (ID);
+                SubPageLink = "Schedule Seminar ID" = field(ID);
             }
 
             part("Seminar Reg Ppt List Part"; "Seminar Reg Ppt List Part")
             {
                 Caption = 'Seminar Registered Participant';
-                SubPageLink = "Schedule Seminar ID" = field (ID);
+                SubPageLink = "Schedule Seminar ID" = field(ID);
             }
         }
 
@@ -83,18 +92,18 @@ page 50020 "Scheduled Seminar Card Archive"
             part("Seminar Info Details"; "Seminar Info Factbox")
             {
                 Caption = 'Seminar Info Details';
-                SubPageLink = "Seminar ID" = field ("Seminar ID");
+                SubPageLink = "Seminar ID" = field("Seminar ID");
             }
 
             part("Seminar Room Details"; "Seminar Room Factbox")
             {
                 Caption = 'Seminar Room Details';
-                SubPageLink = "Room ID" = field ("Room ID");
+                SubPageLink = "Room ID" = field("Room ID");
             }
             part("Seminar Instructor Details"; "Seminar Instructor Factbox")
             {
                 Caption = 'Seminar Instructor Details';
-                SubPageLink = "ID" = field ("Instructor ID");
+                SubPageLink = "ID" = field("Instructor ID");
             }
         }
     }

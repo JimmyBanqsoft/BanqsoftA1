@@ -2,9 +2,9 @@ page 50005 "Seminar Room Card"
 {
     Caption = 'Seminar Room Card';
     PageType = Card;
-    SourceTable = "Seminar Room";
     PromotedActionCategories = 'New,Process,Report';
     RefreshOnActivate = true;
+    SourceTable = "Seminar Room";
 
     layout
     {
@@ -14,14 +14,15 @@ page 50005 "Seminar Room Card"
             {
                 field("Room ID"; "Room ID")
                 {
-                    Caption = 'Room ID';
                     ApplicationArea = All;
+                    Caption = 'Room ID';
                     Editable = false;
                 }
+
                 field("Room Type"; "Room Type")
                 {
-                    Caption = 'Room Type';
                     ApplicationArea = All;
+                    Caption = 'Room Type';
 
                     trigger OnValidate();
                     begin
@@ -30,32 +31,31 @@ page 50005 "Seminar Room Card"
                         else
                             IsInHouse := true;
                     end;
-
                 }
+
                 field("Room Name"; "Room Name")
                 {
-                    Caption = 'Room Name';
                     ApplicationArea = All;
-
+                    Caption = 'Room Name';
                 }
+
                 field("Room Size"; "Room Size")
                 {
-                    Caption = 'Room Size';
                     ApplicationArea = All;
-
+                    Caption = 'Room Size';
                 }
+
                 field("Cost of Room"; "Cost of Room")
                 {
-                    Caption = 'Cost of Room';
                     ApplicationArea = All;
+                    Caption = 'Cost of Room';
                     Editable = IsInHouse;
-
                 }
+
                 field("Over Maximum Participant"; "Over Maximum Participant")
                 {
-                    Caption = 'Over Maximum Participant';
                     ApplicationArea = All;
-
+                    Caption = 'Over Maximum Participant';
                 }
             }
         }

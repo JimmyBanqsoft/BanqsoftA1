@@ -12,6 +12,7 @@ page 50016 "Seminar Add Exp List Part"
         {
             repeater(General)
             {
+                // Add tooltip for each field
                 field("Cost Type"; "Cost Type")
                 {
                     Caption = 'Cost Type';

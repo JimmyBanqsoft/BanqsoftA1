@@ -2,9 +2,9 @@ page 50001 "Seminar Info Card"
 {
     Caption = 'Seminar Info Card';
     PageType = Card;
-    SourceTable = "Seminar Info";
     PromotedActionCategories = 'New,Process,Report';
     RefreshOnActivate = true;
+    SourceTable = "Seminar Info";
 
     layout
     {
@@ -14,46 +14,46 @@ page 50001 "Seminar Info Card"
             {
                 field("Seminar ID"; "Seminar ID")
                 {
-                    Caption = 'Seminar ID';
                     ApplicationArea = All;
+                    Caption = 'Seminar ID';
 
                 }
                 field("Seminar Name"; "Seminar Name")
                 {
-                    Caption = 'Seminar Name';
                     ApplicationArea = All;
+                    Caption = 'Seminar Name';
                     ShowMandatory = true;
 
                 }
                 field(Description; Description)
                 {
-                    Caption = 'Description';
                     ApplicationArea = All;
+                    Caption = 'Description';
 
                 }
                 field("Seminar Duration"; "Seminar Duration")
                 {
-                    Caption = 'Seminar Duration';
                     ApplicationArea = All;
+                    Caption = 'Seminar Duration';
 
                 }
                 field("Seminar Price"; "Seminar Price")
                 {
-                    Caption = 'Seminar Cost';
                     ApplicationArea = All;
+                    Caption = 'Seminar Price';
 
 
                 }
                 field("Minimum Participants"; "Minimum Participants")
                 {
-                    Caption = 'Minimum Participants';
                     ApplicationArea = All;
+                    Caption = 'Minimum Participants';
 
                 }
                 field("Maximum Participant"; "Maximum Participants")
                 {
-                    Caption = 'Maximum Participant';
                     ApplicationArea = All;
+                    Caption = 'Maximum Participant';
 
                 }
             }

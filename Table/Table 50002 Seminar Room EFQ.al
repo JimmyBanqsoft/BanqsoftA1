@@ -54,7 +54,7 @@ table 50002 "Seminar Room"
                         begin
                             AssignRoomCost("Room Type", 3000);
                         end;
-                end
+                end;
             end;
         }
 

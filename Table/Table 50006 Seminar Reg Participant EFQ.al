@@ -100,7 +100,6 @@ table 50006 "Seminar Reg Participant"
     begin
         SemRegPart.SetRange(SemRegPart."Schedule Seminar ID", ScheduledSemID);
         SemRegPart.SetFilter(SemRegPart."Line No.", '<>%1', "Line No.");
-
         if SemRegPart.FindSet() then begin
             repeat
                 CountParticipant := CountParticipant + 1;

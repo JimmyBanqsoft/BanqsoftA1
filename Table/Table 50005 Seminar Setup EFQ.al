@@ -14,7 +14,7 @@ table 50005 "Seminar Setup"
         {
             Caption = 'Seminar Info ID No. Series';
             DataClassification = CustomerContent;
-            TableRelation = "No. Series" where (Code = filter ('SEM*'));
+            TableRelation = "No. Series" where(Code = filter('SEM*'));
         }
 
         field(20; "Seminar Info Description"; Text[100])
@@ -26,7 +26,7 @@ table 50005 "Seminar Setup"
         {
             Caption = 'Seminar Room ID No. Series';
             DataClassification = CustomerContent;
-            TableRelation = "No. Series" where (Code = filter ('SEM*'));
+            TableRelation = "No. Series" where(Code = filter('SEM*'));
         }
 
         field(40; "Seminar Room Description"; Text[100])
@@ -38,7 +38,7 @@ table 50005 "Seminar Setup"
         {
             Caption = 'Seminar Instructor ID No. Series';
             DataClassification = CustomerContent;
-            TableRelation = "No. Series" where (Code = filter ('SEM*'));
+            TableRelation = "No. Series" where(Code = filter('SEM*'));
         }
 
         field(60; "Sem Instructor Description"; Text[100])
@@ -50,14 +50,13 @@ table 50005 "Seminar Setup"
         {
             Caption = 'Scehduled Seminar ID No. Series';
             DataClassification = CustomerContent;
-            TableRelation = "No. Series" where (Code = filter ('SEM*'));
+            TableRelation = "No. Series" where(Code = filter('SEM*'));
         }
 
         field(80; "Scehduled Sem Description"; Text[100])
         {
             DataClassification = CustomerContent;
         }
-
     }
 
     keys

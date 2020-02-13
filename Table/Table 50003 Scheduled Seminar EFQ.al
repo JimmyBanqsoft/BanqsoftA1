@@ -173,9 +173,11 @@ table 50003 "Scheduled Seminar"
     procedure CheckMaxOrOverMaxParticipant(SeminarID: Code[20]; RoomID: Code[20]);
     begin
         SeminarInfo.Reset();
-        SeminarRoom.Reset();
         SeminarInfo.Get(SeminarID);
+
+        SeminarRoom.Reset();
         SeminarRoom.Get(RoomID);
+
         if SeminarInfo."Maximum Participants" < SeminarRoom."Allocated Maximum Participant" then
             "Maximum Participant" := SeminarInfo."Maximum Participants"
         else
@@ -191,7 +193,6 @@ table 50003 "Scheduled Seminar"
         ScheduledSem.SetRange(ScheduledSem."Seminar Date", SemDate);
         ScheduledSem.SetFilter(ScheduledSem.Status, '<>%1', Status::Archieve);
         ScheduledSem.SetFilter(ScheduledSem.ID, '<>%1', ScheduledSemID);
-
         if ScheduledSem.FindSet() then begin
             repeat
                 if SemStartTime < ScheduledSem."Seminar Start Time" then begin
@@ -215,7 +216,6 @@ table 50003 "Scheduled Seminar"
         ScheduledSem.SetRange("Seminar Date", SemDate);
         ScheduledSem.SetFilter(ScheduledSem.ID, '<>%1', ID);
         ScheduledSem.SetFilter(ScheduledSem.Status, '<>%1', Status::Archieve);
-
         if ScheduledSem.FindSet() then begin
             repeat
                 if SemStartTime < ScheduledSem."Seminar Start Time" then begin

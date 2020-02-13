@@ -176,10 +176,10 @@ table 50003 "Scheduled Seminar"
         SeminarRoom.Reset();
         SeminarInfo.Get(SeminarID);
         SeminarRoom.Get(RoomID);
-        if SeminarInfo."Maximum Participants" < SeminarRoom."Over Maximum Participant" then
+        if SeminarInfo."Maximum Participants" < SeminarRoom."Allocated Maximum Participant" then
             "Maximum Participant" := SeminarInfo."Maximum Participants"
         else
-            "Maximum Participant" := SeminarRoom."Over Maximum Participant";
+            "Maximum Participant" := SeminarRoom."Allocated Maximum Participant";
     end;
 
     procedure CheckIfSeminarRoomAvailable(ScheduledSemID: Code[20]; RoomID: Code[20]; SemDate: Date; SemStartTime: Time; SemEndTime: Time);

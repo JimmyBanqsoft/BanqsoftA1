@@ -46,10 +46,10 @@ page 50004 "Seminar Room List"
                     Caption = 'Cost of Room';
                 }
 
-                field("Over Maximum Participant"; "Over Maximum Participant")
+                field("Allocated Maximum Participant"; "Allocated Maximum Participant")
                 {
                     ApplicationArea = All;
-                    Caption = 'Over Maximum Participant';
+                    Caption = 'Allocated Maximum Participant';
                 }
             }
         }

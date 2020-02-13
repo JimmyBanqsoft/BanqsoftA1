@@ -52,10 +52,10 @@ page 50005 "Seminar Room Card"
                     Editable = IsInHouse;
                 }
 
-                field("Over Maximum Participant"; "Over Maximum Participant")
+                field("Allocated Maximum Participant"; "Allocated Maximum Participant")
                 {
                     ApplicationArea = All;
-                    Caption = 'Over Maximum Participant';
+                    Caption = 'Allocated Maximum Participant';
                 }
             }
         }

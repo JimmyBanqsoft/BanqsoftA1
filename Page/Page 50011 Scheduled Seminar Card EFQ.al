@@ -151,7 +151,7 @@ page 50011 "Scheduled Seminar Card"
                                     Message('Participant has registered before.')
                                 else begin
                                     if CountParticipant > "Maximum Participant" then
-                                        if CountParticipant <= TSeminarRoom."Over Maximum Participant" then
+                                        if CountParticipant <= TSeminarRoom."Allocated Maximum Participant" then
                                             if Dialog.Confirm('Are you sure you want to add more than the max capacity?', true) then begin
                                                 "Total Registered Participants" := CountParticipant;
                                                 TRegPpt.Init();

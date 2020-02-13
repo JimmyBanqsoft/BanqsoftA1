@@ -64,9 +64,9 @@ table 50002 "Seminar Room"
             DataClassification = CustomerContent;
         }
 
-        field(90; "Over Maximum Participant"; Integer)
+        field(90; "Allocated Maximum Participant"; Integer)
         {
-            Caption = 'Over Maximum Participants';
+            Caption = 'Allocated Maximum Participants';
             DataClassification = CustomerContent;
         }
 
@@ -82,7 +82,7 @@ table 50002 "Seminar Room"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Room ID", "Room Name", "Room Size", "Room Type", "Cost of Room", "Over Maximum Participant")
+        fieldgroup(DropDown; "Room ID", "Room Name", "Room Size", "Room Type", "Cost of Room", "Allocated Maximum Participant")
         { }
     }
 

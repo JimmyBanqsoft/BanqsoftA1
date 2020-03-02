@@ -21,26 +21,31 @@ page 50011 "Scheduled Seminar Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Seminar ID';
+                    ShowMandatory = true;
                 }
                 field("Room ID"; "Room ID")
                 {
                     ApplicationArea = All;
                     Caption = 'Room ID';
+                    ShowMandatory = true;
                 }
                 field("Instructor ID"; "Instructor ID")
                 {
                     ApplicationArea = All;
                     Caption = 'Instructor ID';
+                    ShowMandatory = true;
                 }
                 field("Seminar Date"; "Seminar Date")
                 {
                     ApplicationArea = All;
                     Caption = 'Seminar Date';
+                    ShowMandatory = true;
                 }
                 field("Seminar Start Time"; "Seminar Start Time")
                 {
                     ApplicationArea = All;
                     Caption = 'Start Time';
+                    ShowMandatory = true;
                 }
                 field("Seminar End Time"; "Seminar End Time")
                 {
@@ -129,9 +134,8 @@ page 50011 "Scheduled Seminar Card"
                     if PartListPage.RunModal() = Action::LookupOK then begin
                         PartListPage.GetRecord(TParticipant);
                         PartListPage.SetSelectionFilter(TParticipant);
-                        TSeminarRoom.Get("Room ID");
-                        TRegPpt.SetRange(TRegPpt."Schedule Seminar ID", ID);
 
+                        TRegPpt.SetRange(TRegPpt."Schedule Seminar ID", ID);
                         if TRegPpt.FindLast() then
                             LineNo := TRegPpt."Line No."
                         else
@@ -139,19 +143,21 @@ page 50011 "Scheduled Seminar Card"
 
                         CountParticipant := TRegPpt.Count();
 
+                        TSeminarRoom.Get("Room ID");
+
                         if TParticipant.FindSet() then
                             repeat
                                 CountParticipant := CountParticipant + 1;
-                                LineNo := LineNo + 1;
+                                LineNo := LineNo + 10000;
 
                                 TRegPpt.Reset();
                                 TRegPpt.SetRange(TRegPpt."Schedule Seminar ID", ID);
                                 TRegPpt.SetRange(TRegPpt.ID, TParticipant."No.");
                                 if TRegPpt.FindFirst() then
-                                    Message('Participant has registered before.')
+                                    Message('Participant has been registered.')
                                 else begin
-                                    if CountParticipant > "Maximum Participant" then
-                                        if CountParticipant <= TSeminarRoom."Allocated Maximum Participant" then
+                                    if CountParticipant > "Maximum Participant" then begin
+                                        if CountParticipant <= TSeminarRoom."Allocated Maximum Participant" then begin
                                             if Dialog.Confirm('Are you sure you want to add more than the max capacity?', true) then begin
                                                 "Total Registered Participants" := CountParticipant;
                                                 TRegPpt.Init();
@@ -166,8 +172,10 @@ page 50011 "Scheduled Seminar Card"
                                             end
                                             else
                                                 exit
+                                        end
                                         else
                                             Message('No more slot to register more participant.')
+                                    end
                                     else begin
                                         "Total Registered Participants" := CountParticipant;
                                         TRegPpt.Init();
@@ -184,7 +192,6 @@ page 50011 "Scheduled Seminar Card"
                                         TCBR.SetCurrentKey(TCBR."Link to Table", TCBR."Contact No.");
                                         TCBR.SetRange("Link to Table", TCBR."Link to Table"::Customer);
                                         TCBR.SetRange(TCBR."Contact No.", TParticipant."Company No.");
-
                                         if TCBR.FindFirst() then
                                             CustomerID := TCBR."No.";
 
@@ -208,7 +215,7 @@ page 50011 "Scheduled Seminar Card"
 
                 trigger OnAction();
                 begin
-                    if "Seminar ID" <> '' then begin
+                    if (("Seminar ID" <> '') and ("Room ID" <> '') and ("Instructor ID" <> '') and ("Seminar Date" <> 0D) and ("Seminar Start Time" <> 0T)) then begin
                         if "Total Registered Participants" < "Minimum Participant" then begin
                             if Dialog.Confirm('Not enough participant to schedule this Seminar. Do you want to cancel this seminar?') then begin
                                 Status := Status::Ongoing;
@@ -223,7 +230,9 @@ page 50011 "Scheduled Seminar Card"
                             ShowScheduledSemCard(false);
                             CurrPage.Close();
                         end;
-                    end;
+                    end
+                    else
+                        Error('You have not fill in all the required fields yet!');
                 end;
             }
         }

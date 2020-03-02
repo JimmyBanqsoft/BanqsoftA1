@@ -26,10 +26,15 @@ page 50005 "Seminar Room Card"
 
                     trigger OnValidate();
                     begin
-                        if "Room Type" = "Room Type"::"In-House" then
-                            IsInHouse := false
-                        else
-                            IsInHouse := true;
+                        case "Room Type" of
+                            "Room Type"::"In-House":
+                                begin
+                                    IsInHouse := false
+                                end;
+                            else begin
+                                    IsInHouse := true;
+                                end;
+                        end;
                     end;
                 }
 
